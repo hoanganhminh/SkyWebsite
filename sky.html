@@ -20,7 +20,7 @@
         <div class="text">
             <strong>Hi friend!</strong>
             <h1>I'm Minh</h1>
-            <p>I'm an angel, wanna see me? <a id="test" href="#">hover here!</a></p>
+            <p>I'm an angel, wanna see me? <a id="test" href="#">Click here!</a></p>
         </div>
         <div class="clouds">
             <div class="float-cloud">
@@ -68,20 +68,27 @@
         </div>
     </div>
     <script>
-        $("a").hover(
+        $("a").click(
             function () {
                 $('#angel1').css('display', 'block');
                 $('#angel2').css('display', 'block');
-                $('#angel1').css('animation', 'fallen 30s linear');
-                $('#angel2').css('animation', 'rise 30s linear');
+                $('#angel1').css('animation', 'fallen 100s linear');
+                $('#angel2').css('animation', 'rise 100s linear');
                 $("h1").text("God Bless U");
                 $('h1').css("color", "yellow");
                 document.getElementById('autoplay').play();
-            }, function () {
+                $(this).text("Double click to return!");
+                $(this).css("color","pink")
+            }
+        );
+        $("a").dblclick(
+            function () {
                 $('#angel1').css('animation', 'fallen-rev 2s linear');
                 $('#angel2').css('animation', 'rise-rev 2s linear');
                 $("h1").text("I'm Minh");
                 $('h1').css("color", "white");
+                $(this).text("Click here");
+                $(this).css("color","yellow")
             }
         );
     </script>
