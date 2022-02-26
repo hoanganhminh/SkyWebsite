@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <audio id="autoplay" >
+    <audio id="autoplay">
         <source src="wow.mp3">
     </audio>
 
@@ -20,7 +20,9 @@
         <div class="text">
             <strong>Hi friend!</strong>
             <h1>I'm Minh</h1>
-            <p>I'm an angel, wanna see me? <a id="test" href="#">Double click here!</a></p>
+            <p>I'm an angel, wanna see me? </p>
+            <a id="a1" href="#">Click here!</a>
+            <a id="a2" href="#" style="display: none;color: pink;">Click again to return!</a>
         </div>
         <div class="clouds">
             <div class="float-cloud">
@@ -68,7 +70,7 @@
         </div>
     </div>
     <script>
-        $("a").dblclick(
+        $("#a1").click(
             function () {
                 $('#angel1').css('display', 'block');
                 $('#angel2').css('display', 'block');
@@ -77,18 +79,19 @@
                 $("h1").text("God Bless U");
                 $('h1').css("color", "yellow");
                 document.getElementById('autoplay').play();
-                $(this).text("Single click to return!");
-                $(this).css("color","pink")
+                $(this).css("display", "none");
+                $('#a2').css("display", "block");
+
             }
         );
-        $("a").click(
+        $("#a2").click(
             function () {
                 $('#angel1').css('animation', 'fallen-rev 2s linear');
                 $('#angel2').css('animation', 'rise-rev 2s linear');
                 $("h1").text("I'm Minh");
                 $('h1').css("color", "white");
-                $(this).text("Double click here");
-                $(this).css("color","yellow")
+                $(this).css("display", "none");
+                $('#a1').css("display", "block");
             }
         );
     </script>
