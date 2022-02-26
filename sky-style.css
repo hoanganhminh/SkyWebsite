@@ -34,6 +34,7 @@
     font-weight: 600;
     letter-spacing: 1px;
     text-decoration: none;
+    transition: all 1s;
 }
 /* ================ */
 .clouds img{
@@ -109,7 +110,7 @@
     0%{
         top: -90vh;
     }
-    5%{
+    2%{
         top: 0vh;
     }
     100%{
@@ -128,7 +129,7 @@
     0%{
         top:120vh
     }
-    5%{
+    2%{
         top: 40vh;
     }
     100%{
