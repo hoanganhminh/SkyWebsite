@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <link rel="shortcut icon" href="image/sky.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <audio id="autoplay" >
+        <source src="wow.mp3">
+    </audio>
+
+    <div class="main">
+        <div class="text">
+            <strong>Hi friend!</strong>
+            <h1>I'm Minh</h1>
+            <p>I'm an angel, wanna see me? <a id="test" href="#">hover here!</a></p>
+        </div>
+        <div class="clouds">
+            <div class="float-cloud">
+                <div class="cloud1">
+                    <img src="image/Cloud1.png" alt="">
+                </div>
+                <div class="cloud2">
+                    <img src="image/Cloud1.png" alt="">
+                </div>
+                <div class="cloud3">
+                    <img src="image/Cloud1.png" alt="">
+                </div>
+                <div class="cloul4">
+                    <img src="image/Cloud1.png" alt="">
+                </div>
+            </div>
+            <div class="fly-cloud">
+                <div class="flycloud1">
+                    <img src="image/Cloud1.png" alt="" srcset="" style="width: 10%;top: 25vh;left: -10%;">
+                </div>
+                <div class="flycloud2">
+                    <img src="image/Cloud1.png" alt="" srcset="" style="width: 20%;top: 15vh;left: -20%;">
+                </div>
+                <div class="flycloud3">
+                    <img src="image/Cloud1.png" alt="" srcset="" style="width: 25%;top: 60vh;left: -40%;">
+                </div>
+                <div class="flycloud4">
+                    <img src="image/Cloud1.png" alt="" srcset="" style="width: 35%;top: 70vh;left: 30%;">
+                </div>
+                <div class="flycloud5">
+                    <img src="image/Cloud1.png" alt="" srcset="" style="width: 25%;top: -5vh;left: -60%;">
+                </div>
+                <div class="flycloud6">
+                    <img src="image/Cloud1.png" alt="" srcset="" style="width: 30%;top: 95vh;left: -70%;">
+                </div>
+            </div>
+        </div>
+        <div id="angel">
+            <div class="angel1">
+                <img id="angel1" src="image/angel.png" alt="">
+            </div>
+            <div class="angel2">
+                <img id="angel2" src="image/angel2.png" alt="">
+            </div>
+        </div>
+    </div>
+    <script>
+        $("a").hover(
+            function () {
+                $('#angel1').css('display', 'block');
+                $('#angel2').css('display', 'block');
+                $('#angel1').css('animation', 'fallen 30s linear');
+                $('#angel2').css('animation', 'rise 30s linear');
+                $("h1").text("God Bless U");
+                $('h1').css("color", "yellow");
+                document.getElementById('autoplay').play();
+            }, function () {
+                $('#angel1').css('animation', 'fallen-rev 2s linear');
+                $('#angel2').css('animation', 'rise-rev 2s linear');
+                $("h1").text("I'm Minh");
+                $('h1').css("color", "white");
+            }
+        );
+    </script>
+</body>
+
+</html>
