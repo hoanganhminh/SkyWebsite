@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+}
+
+body {
+  background-color: #208aba;
+}
+
+.main {
+  background-image: url(image/sky.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.main .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.main .text strong {
+  font-size: 20px;
+}
+
+.main .text h1 {
+  font-size: 68px;
+  width: 460px;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.main .text a {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.main .text #a1 {
+  color: yellow;
+}
+
+.main .text #a2 {
+  color: pink;
+  display: none;
+}
+
+.main .clouds img {
+  position: absolute;
+}
+
+.main .clouds .float-cloud {
+  -webkit-animation: floating 5s linear infinite;
+          animation: floating 5s linear infinite;
+}
+
+.main .clouds .float-cloud .cloud1 img {
+  width: 30%;
+  right: -10%;
+  top: 75vh;
+}
+
+.main .clouds .float-cloud .cloud2 img {
+  width: 35%;
+  left: -10%;
+  top: 70vh;
+}
+
+.main .clouds .float-cloud .cloud3 img {
+  width: 25%;
+  left: -10%;
+  top: 10vh;
+}
+
+.main .clouds .float-cloud .cloul4 img {
+  width: 25%;
+  right: -10%;
+  top: 15vh;
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  50% {
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
+  }
+  100% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+}
+
+.main .clouds .fly-cloud {
+  -webkit-animation: flying 200s linear infinite;
+          animation: flying 200s linear infinite;
+}
+
+.main .clouds .fly-cloud .flycloud1 img {
+  width: 10%;
+  top: 25vh;
+  left: -10%;
+}
+
+.main .clouds .fly-cloud .flycloud2 img {
+  width: 20%;
+  top: 15vh;
+  left: -20%;
+}
+
+.main .clouds .fly-cloud .flycloud3 img {
+  width: 25%;
+  top: 60vh;
+  left: -40%;
+}
+
+.main .clouds .fly-cloud .flycloud4 img {
+  width: 35%;
+  top: 70vh;
+  left: 30%;
+}
+
+.main .clouds .fly-cloud .flycloud5 img {
+  width: 25%;
+  top: -5vh;
+  left: -60%;
+}
+
+.main .clouds .fly-cloud .flycloud6 img {
+  width: 30%;
+  top: 95vh;
+  left: -70%;
+}
+
+@-webkit-keyframes flying {
+  0% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  100% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+}
+
+@keyframes flying {
+  0% {
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  100% {
+    -webkit-transform: translateX(120%);
+            transform: translateX(120%);
+  }
+}
+
+.main #angel .angel1 img {
+  position: absolute;
+  height: 90vh;
+  top: -90vh;
+  right: -20px;
+}
+
+.main #angel .angel2 img {
+  position: absolute;
+  height: 80vh;
+  top: 120vh;
+}
+
+@-webkit-keyframes fallen {
+  0% {
+    top: -90vh;
+  }
+  2% {
+    top: 0vh;
+  }
+  100% {
+    top: 0vh;
+  }
+}
+
+@keyframes fallen {
+  0% {
+    top: -90vh;
+  }
+  2% {
+    top: 0vh;
+  }
+  100% {
+    top: 0vh;
+  }
+}
+
+@-webkit-keyframes fallen-rev {
+  0% {
+    top: 0vh;
+  }
+  100% {
+    top: -90vh;
+  }
+}
+
+@keyframes fallen-rev {
+  0% {
+    top: 0vh;
+  }
+  100% {
+    top: -90vh;
+  }
+}
+
+@-webkit-keyframes rise {
+  0% {
+    top: 120vh;
+  }
+  2% {
+    top: 40vh;
+  }
+  100% {
+    top: 40vh;
+  }
+}
+
+@keyframes rise {
+  0% {
+    top: 120vh;
+  }
+  2% {
+    top: 40vh;
+  }
+  100% {
+    top: 40vh;
+  }
+}
+
+@-webkit-keyframes rise-rev {
+  0% {
+    top: 40vh;
+  }
+  100% {
+    top: 120vh;
+  }
+}
+
+@keyframes rise-rev {
+  0% {
+    top: 40vh;
+  }
+  100% {
+    top: 120vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .text strong {
+    font-size: 16px !important;
+  }
+  .text p {
+    font-size: 12px !important;
+  }
+  .text h1 {
+    font-size: 35px !important;
+    width: 240px !important;
+  }
+  .text a {
+    font-size: 15px !important;
+  }
+  #angel .angel1 img {
+    height: 60vh !important;
+    right: -120px !important;
+  }
+  #angel .angel2 img {
+    height: 60vh !important;
+    left: -90px !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #angel .angel1 img {
+    right: -120px !important;
+  }
+  #angel .angel2 img {
+    left: -90px !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
